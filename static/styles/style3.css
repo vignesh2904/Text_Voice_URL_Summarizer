@@ -1,0 +1,123 @@
+body {
+    background-image: url("../images/voice_background.jpg");
+    background-size: 1535px 775px;
+}
+
+h1 {
+    font-size: 300%;
+    position: fixed;
+    top: 0px;
+    left: 225px;
+    color: #b93d04;
+}
+
+#gif {
+    position: absolute;
+    top: 175px;
+    right: 270px;
+    display: none;  /* Hide the GIF initially */
+}
+
+#voice-result {
+    width: 460px;
+    height: 453px;
+    position: absolute;
+    right: 187px;
+    top: 157px;
+    overflow: auto;  /* Enable scrolling */
+}
+
+#voice-upload-form {
+    width: 100%;
+    max-width: 600px;
+    height: 80px;
+    margin: 0 auto;
+    padding: 20px;
+    position: absolute;
+    top: 10px;
+    right: 90px;
+}
+
+#voice-upload-form label {
+    font-size: 1.6em;
+    color: #151312;
+    margin-bottom: 10px;
+    position: relative;
+    left: 25px;
+    display: block;
+}
+
+#voice-upload-form input[type="file"] {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1em;
+    top: 20px;
+    position: relative;
+    left: 30px;
+}
+
+#submit {
+    position: relative;
+    top: -50px;
+    left: 360px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #e76406;
+    color: white;
+    border: none;
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+}
+
+#submit:hover {
+    background-color: #a0522d;
+}
+
+#clear {
+    position: relative;
+    top: 575px;
+    left: -40px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #e76406;
+    color: white;
+    border: none;
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+}
+
+#clear:hover {
+    background-color: #a0522d;
+}
+
+#text-summary-text {
+    max-height: 400px;  /* Adjust as needed */
+    overflow: auto;  /* Enable scrolling */
+}
+
+/* Custom scrollbar styles */
+#voice-result::-webkit-scrollbar,
+#text-summary-text::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+#voice-result::-webkit-scrollbar-track,
+#text-summary-text::-webkit-scrollbar-track {
+    background: #f1f1f19d; /* Background of the scrollbar track */
+    border-radius: 10px;
+}
+
+#voice-result::-webkit-scrollbar-thumb,
+#text-summary-text::-webkit-scrollbar-thumb {
+    background: #ab6a2e; /* Color of the scrollbar thumb */
+    border-radius: 10px;
+}
+
+#voice-result::-webkit-scrollbar-thumb:hover,
+#text-summary-text::-webkit-scrollbar-thumb:hover {
+    background: #cc9a66; /* Color of the scrollbar thumb on hover */
+}

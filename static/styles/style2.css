@@ -1,0 +1,229 @@
+/* Body */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("../images/text_background.png");
+    background-size: cover;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 800px; /* adjust as needed */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    text-align: center;
+    position: absolute;
+    bottom: 250px;
+}
+/* H1 Tag */
+h1 {
+    position: relative;
+    top: 220px;
+    font-size: 3em;
+    color: #4a4a4a;
+    text-shadow: 1px 1px 2px #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Button Styles */
+#text-url-button, #text-file-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #d09872;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+}
+/*#text-clearButton,*/ #text-backButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #d6854b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+}
+#text-url-button:hover, #text-file-button:hover, /*#text-clearButton:hover,*/ #text-backButton:hover {
+    background-color: #a0522d;
+}
+#text-backButton {
+    position: absolute;
+    left: 320px;
+    top: 350px;
+}
+/* Text URL Form */
+#text-url-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border: 4px double;
+    top: -350px;
+}
+#text-url-form label, #text-url-form input {
+    font-size: 1.6em;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+    position: relative;
+    left: 100px;
+    display: block; /* Ensure it's a block element */
+}
+
+#text-url-form input[type="url"] {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1em;
+    position: relative;
+    top:-38px;
+    left:310px;
+}
+
+/* Text File Form */
+#text-file-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: -350px;
+}
+#text-file-form label {
+    font-size: 1.6em;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+    display: block; /* Ensure it's a block element */
+    position: relative;
+    left: 60px;
+}
+
+#text-file-form input[type="file"] {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1em;
+    position: relative;
+    top: -37px;
+    left: 340px;
+}
+
+/* Submit Button */
+#submit-url, #submit-file {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #d6854b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    left: 250px;
+
+}
+
+#submit-url:hover, #submit-file:hover {
+    background-color: #a0522d;
+}
+
+/* Manuscript */
+.manuscript {
+    width: 600px;
+    height: 550px;
+    background: #e2ac73;
+    border: 6px double #d6bba8;
+    border-radius: 10px;
+    overflow: hidden;
+    transform-origin: bottom;
+    transform: scaleY(0);
+    transition: transform 1s ease-in-out;
+    position: relative;
+    top: -65.5px;
+    margin-top: 20px;
+}
+
+.manuscript.open {
+    transform: scaleY(1);
+}
+.manuscript-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.manuscript.open .manuscript-content {
+    opacity: 1;
+}
+
+/* Manuscript Top */
+.manuscript-top {
+    width: 1000px;
+    height: 60px;
+    margin-bottom: 20px;
+    transition: transform 1s ease-in-out;
+    position: absolute;
+    left: 265px;
+    top: 500px;
+    transform: translateY(0);
+    visibility: hidden; /* Initial state hidden */
+}
+
+.manuscript-top.visible {
+    visibility: visible;
+}
+.manuscript-top.move-up {
+    transform: translateY(-454.5px);
+}
+
+/* Manuscript Bottom */
+.manuscript-bottom {
+    width: 1000px;
+    height: 60px;
+    margin-bottom: 20px;
+    transition: transform 1s ease-in-out;
+    position: absolute;
+    left: 265px;
+    top: 500px;
+    transform: translateY(0);
+    visibility: hidden; /* Initial state hidden */
+}
+
+.manuscript-bottom.visible {
+    visibility: visible;
+}
+
+.manuscript-bottom.move-down {
+    transform: translateY(160.5px);
+}
+
+/* Scrollbar */
+.manuscript-content::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+.manuscript-content::-webkit-scrollbar-track {
+    background: #f1f1f19d; /* Background of the scrollbar track */
+    border-radius: 10px;
+}
+.manuscript-content::-webkit-scrollbar-thumb {
+    background: #ab6a2e; /* Color of the scrollbar thumb */
+    border-radius: 10px;
+}
+
+.manuscript-content::-webkit-scrollbar-thumb:hover {
+    background: #cc9a66; /* Color of the scrollbar thumb on hover */
+}

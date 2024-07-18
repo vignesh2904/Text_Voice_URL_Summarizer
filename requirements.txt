@@ -1,0 +1,9 @@
+Here is the List of all Necessary python libraries to be installed to run the application which can be used with pip install and library name
+
+Flask 
+openai 
+openai whisper 
+pydub 
+requests 
+beautifulsoup4 
+transformers

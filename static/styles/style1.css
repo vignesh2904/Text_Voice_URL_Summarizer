@@ -1,0 +1,84 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+    background-image: url("../images/index_background.jpg");
+    background-size: 1545px 775px;
+}
+
+h1 {
+    position: absolute;
+    top: 20px; /* Adjust the top position as needed */
+    left: 20px; /* Adjust the left position as needed */
+}
+
+.button-container {
+    position: relative;
+    width: 360px;
+    height: 360px; /* Ensure height is equal to width for a perfect circle */
+    /*border: 2px solid; /* Add your border color here */
+    border-radius: 50%; /* Make the container circular */
+    animation: rotateContainer 20s linear infinite;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.button {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 280px;
+    height: 80px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background-color: #3498db; /* Initial background color */
+    border: 4px double;
+    border-image: linear-gradient(0deg, #0b0b05, #0b0b05);
+    border-image-slice: 1;
+    border-radius: 10px; /* Smoothen corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    transition: transform 0.6s, background-color 0.6s, color 0.6s, box-shadow 0.6s;
+    clip-path: polygon(15% 0%, 85% 0%, 100% 100%, 0% 100%);
+    transform: none; /* Prevent buttons from rotating */
+}
+
+#button1 {
+    background-color: #d67d61; /* Pale Orange */
+    top: 170px;
+    left: 115px;
+    transform: rotate(120deg);
+}
+
+#button2 {
+    background-color: #6dc170; /* Light Green */
+    top: 170px;
+    left: -50px;
+    transform: rotate(-120deg);
+}
+#button1:hover {
+    transform: scale(1.2) rotate(120deg) !important;
+    background-color: black !important;
+    color: white !important;
+}
+#button2:hover {
+    transform: scale(1.2) rotate(-120deg)!important;
+    background-color: black !important;
+    color: white !important;
+}
+@keyframes rotateContainer {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+

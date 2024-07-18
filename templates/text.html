@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Summarization</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style2.css') }}">
+</head>
+<body>
+    <h1>Text Summarization</h1>
+    
+    <!-- Manuscript Container -->
+    <div id="text-manuscript-container" style="visibility: hidden;">
+        <img src="{{ url_for('static', filename='images/manuscript_borders.png') }}" alt="Decorative Image" class="manuscript-top">
+        <div class="manuscript" id="text-manuscript">
+            <div class="manuscript-content" id="text-manuscript-content">
+                <p id="text-summary-text" style="font-family:Gabriola; font-size: 150%; color: rgb(18, 8, 8);"></p>
+            </div>
+        </div>
+        <img src="{{ url_for('static', filename='images/manuscript_borders.png') }}" alt="Decorative Image" class="manuscript-bottom">
+    </div>
+
+    <div id="text-options" class="container">
+        <button id="text-url-button">Enter URL</button>
+        <button id="text-file-button">Upload File</button>
+    </div>
+
+    <form id="text-url-form" action="/upload-url" method="post" style="display: none;">
+        <label for="textUrl"><b><i>Enter URL here</i></b></label>
+        <input type="url" id="textUrl" name="textUrl">
+        <button id="submit-url" type="submit">Submit</button>
+    </form>
+    <form id="text-file-form" action="/upload" method="post" enctype="multipart/form-data" style="display: none;">
+        <label for="textFile"><b><i>Choose your text file</i></b></label>
+        <input type="file" id="textFile" name="textFile" accept=".txt">
+        <button id="submit-file" type="submit">Submit</button>
+    </form>
+    <!--<button id="text-clearButton" style="display: none;">Clear</button>-->
+    <button id="text-backButton" style="display: none;">Back</button>
+
+    <div id="text-result"></div>
+    <script src="{{ url_for('static', filename='scriptt.js') }}"></script>
+</body>
+</html>
