@@ -1,4 +1,4 @@
-General Instructions
+General Instructions:
 
 Clone the Repository as such. Altering the path might affect the working of the application.
 Replace API_KEY variable with OpenAI API key in the "key.py" file as a string before trying to execute the "app.py" file.
